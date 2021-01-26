@@ -356,28 +356,32 @@ hist(mante_results$Polygyny$mantel$perm.NULL, breaks = 20, xlim = poly_lim,
      main = "", xlab = "", border = "gray45", col = "gray80")
 abline(v = mante_results$Polygyny$mantel$r.Mantel, col = "#20C12F", lwd = 2)
 abline(v = mean(mante_results$Polygyny$mantel$perm.NULL), lty = 2, lwd = 1.5)
-legend("topright", legend = "A", box.col = "white", bg = "white", inset = 0.001)
+legend("topright", legend = "a", box.col = "white", bg = "white", inset = 0.001,
+       text.font = 2, cex = 1.1)
 box(bty = "l")
 
 hist(mante_results$Coloniality$mantel$perm.NULL, breaks = 20, xlim = colo_lim, 
      main = "", xlab = "", ylab = "", border = "gray45", col = "gray80")
 abline(v = mante_results$Coloniality$mantel$r.Mantel, col = "#20C12F", lwd = 2)
 abline(v = mean(mante_results$Coloniality$mantel$perm.NULL), lty = 2, lwd = 1.5)
-legend("topright", legend = "B", box.col = "white", bg = "white", inset = 0.001)
+legend("topright", legend = "b", box.col = "white", bg = "white", inset = 0.001,
+       text.font = 2, cex = 1.1)
 box(bty = "l")
 
 hist(mante_results$Habitat$mantel$perm.NULL, breaks = 20, xlim = habi_lim, 
      main = "", xlab = "Mantel r", border = "gray45", col = "gray80")
 abline(v = mante_results$Habitat$mantel$r.Mantel, col = "#20C12F", lwd = 2)
 abline(v = mean(mante_results$Habitat$mantel$perm.NULL), lty = 2, lwd = 1.5)
-legend("topright", legend = "C", box.col = "white", bg = "white", inset = 0.001)
+legend("topright", legend = "c", box.col = "white", bg = "white", inset = 0.001,
+       text.font = 2, cex = 1.1)
 box(bty = "l")
 
 hist(mante_results$Diet$mantel$perm.NULL, breaks = 20, xlim = diet_lim, 
      main = "", xlab = "Mantel r", ylab = "", border = "gray45", col = "gray80")
 abline(v = mante_results$Diet$mantel$r.Mantel, col = "#20C12F", lwd = 2)
 abline(v = mean(mante_results$Diet$mantel$perm.NULL), lty = 2, lwd = 1.5)
-legend("topright", legend = "D", box.col = "white", bg = "white", inset = 0.001)
+legend("topright", legend = "d", box.col = "white", bg = "white", inset = 0.001,
+       text.font = 2, cex = 1.1)
 box(bty = "l")
 
 legend("right", legend = c("Observed r", "Null mean", "Mantel null"), 
@@ -387,8 +391,8 @@ legend("right", legend = c("Observed r", "Null mean", "Mantel null"),
 
 dev.off()
 
-
 # saving results
 dir.create("Mantel_test_results")
+
 save(mante_results, file = "Mantel_test_results/Mantel_results.RData")
 # ------------------------------------------------------------------------------
