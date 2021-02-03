@@ -1,0 +1,88 @@
+# ------------------------------------------------------------------------------
+# Project: Evolutionary shifts in social mating systems drive habitat shifts in 
+#          birds
+# Title: Guide to perform BayesTraits analyses.
+# Author: Thilina De Silva et al.
+# Date: 25/01/2021
+# ------------------------------------------------------------------------------
+
+
+# Initial instructions ---------------------------------------------------------
+# Download the program at:
+# http://www.evolution.rdg.ac.uk/BayesTraitsV3/BayesTraitsV3.html
+# 
+# Unzip the files in your working directory.
+#
+# Prepare your file for analysis:
+# - This is text file that contains three (tab separated) columns
+# - Column 1: List of species
+# - Column 2: binary values for first trait
+# - Column 3: binary values for second trait
+# - When the state of trait is unknown or missing use a hyphen (-)
+# - Place the txt file in your working directory 
+# ------------------------------------------------------------------------------
+
+
+# Performing analyses ----------------------------------------------------------
+# Open your terminal
+# In your terminal: 
+# - Go to your working directory.
+# - Type the name of the txt file previously prepared. This will open BayesTraits
+#   options.
+#
+# Options of BayesTraits:
+# Please select the model of evolution to use.
+#  1) MultiState
+#  2) Discrete: Independent
+#  3) Discrete: Dependant
+#  4) Continuous: Random Walk (Model A)
+#  5) Continuous: Directional (Model B)
+#  6) Continuous: Regression
+#  7) Independent Contrast
+#  8) Independent Contrast: Correlation
+#  9) Independent Contrast: Regression
+#  10) Discrete: Covarion
+#  11) Discrete: Heterogeneous
+#  13) Geo
+#
+# Type the number that corresponds to each analyses. Numbers and other details 
+# to be defined for all analyses performed are shown below.
+# ------------------------------------------------------------------------------
+
+
+# Details for analyses ---------------------------------------------------------
+# For Discrete, Independent, type: 2
+# For Discrete, Dependant, type: 3
+#
+# You will see these options:
+# Please select the analysis method to use.
+#  1) Maximum Likelihood.
+#  2) MCMC
+#
+# Select MCMC by typing: 2
+#
+# Other options will be shown. Type details as follows:
+# - To defined burnin value type 
+#     Burnin 500000
+# - Define number of iterations typing
+#     Iterations 400000000
+# - Define Reversible Jump Hyper-prior typing
+#     RJHP exp 0 100
+# - Define sampling size by typing
+#     sample 100000
+# - Define stones typing
+#     stones 200 200000
+#
+# When doing dependat analyses after comparing the two models define 
+# fossilization as follows:
+#  Note: do this when defining sample size and the other later parameters
+# 
+#   AddTag Roottag Amblyospiza_albifrons Euplectes_progne
+#   corresponding states ((0,0 = 0), (0,1 = 1), (1,0 =2), (1,1 = 3))
+#   Fossil BigNode Roottag 1
+#
+#
+# To run analysis type
+#     run
+# ------------------------------------------------------------------------------
+
