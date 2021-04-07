@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
-# Project: Evolutionary shifts in social mating systems drive habitat shifts in 
-#          birds
+# Project: Evolution of social mating systems and nesting sociality shapes 
+#          historical habitat shifts in birds
 # Title: All functions produced to make the coding simpler in script the script 
 #        "Complete_process.R"
 # Author: Thilina De Silva et al.
