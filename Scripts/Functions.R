@@ -52,7 +52,7 @@ ml_rec <- function(trees, char_table, mdir, colors, legends) {
       
       # defining matrix with unknown data
       mat_unk <- to.matrix(character[wt$tip.label], levels(character)) 
-      nunkn <- rownames(mat_unk[rownames(mat_unk) %in% unkn, ]) 
+      nunkn <- rownames(mat_unk)[rownames(mat_unk) %in% unkn] 
       for (j in 1:length(nunkn)) {mat_unk[nunkn[j], ] <- c(0.5, 0.5)} 
       
       write.csv(mat_unk, paste0(idir[w], "/", char_names[i], "_initial_matrix.csv"))
@@ -185,7 +185,7 @@ scm_rec <- function(trees, char_table, mdir, colors, legends, transition_legend)
       
       # defining matrix with unknown data
       mat_unk <- to.matrix(character[wt$tip.label], levels(character)) #  matrix containing the prior probability 
-      nunkn <- rownames(mat_unk[rownames(mat_unk) %in% unkn, ]) # finding unknowns in matrix
+      nunkn <- rownames(mat_unk)[rownames(mat_unk) %in% unkn] # finding unknowns in matrix
       for (j in 1:length(nunkn)) {mat_unk[nunkn[j], ] <- c(0.5, 0.5)} # replacing values for unknowns by 0.5 - 0.5
       
       write.csv(mat_unk, paste0(idir[w], "/", char_names[i], "_initial_matrix.csv")) # matrix for reconstructions
