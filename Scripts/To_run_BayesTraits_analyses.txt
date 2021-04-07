@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
-# Project: Evolutionary shifts in social mating systems drive habitat shifts in 
-#          birds
+# Project: Evolution of social mating systems and nesting sociality shapes 
+#          historical habitat shifts in birds
 # Title: Guide to perform BayesTraits analyses.
 # Author: Thilina De Silva et al.
 # Date: 25/01/2021
