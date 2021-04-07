@@ -1,6 +1,6 @@
 # ------------------------------------------------------------------------------
-# Project: Evolutionary shifts in social mating systems drive habitat shifts in 
-#          birds
+# Project: Evolution of social mating systems and nesting sociality shapes 
+#          historical habitat shifts in birds
 # Title: All R code used to perform analyses.
 # Author: Thilina De Silva et al.
 # Date: 25/01/2021
@@ -43,8 +43,8 @@ weaver_tree <- list(ML = ml_tree, BY = by_tree)
 # colors (list to be used in function below lapply)
 colores <- list(polygyny = c("gray75", "brown2"), 
                 coloniality = c("dimgray", "darkorange1"),
-                herbivory = c("darkolivegreen1", "darksalmon"), 
-                habitat = c("lightgoldenrod1", "green4"))
+                diet = c("#998ec3", "#f1a340"), 
+                habitat = c("#E8BE4E", "green4"))
 
 # names for the legends (list to be used below)
 legends <- list(c("Monogamy", "Polygyny"), c("Non-colonial", "Colonial"), 
@@ -350,7 +350,7 @@ diet_lim <- range(c(mante_results$Diet$mantel$perm.NULL,
 jpeg("Mantel_test_results/Mantel_test_results.jpg", width = 16.6, height = 16.6,
      units = "cm", res = 600)
 
-par(mfrow = c(2, 2), mar = c(4.5, 4.5, 0.5, 0.5))
+par(mfrow = c(2, 2), mar = c(4.5, 4.5, 0.5, 0.6))
 
 hist(mante_results$Polygyny$mantel$perm.NULL, breaks = 20, xlim = poly_lim, 
      main = "", xlab = "", border = "gray45", col = "gray80")
