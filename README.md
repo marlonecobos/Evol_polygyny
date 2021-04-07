@@ -1,4 +1,4 @@
-Evolution of social behavior shapes habitat shifts in birds
+Evolution of social mating systems and nesting sociality shapes historical habitat shifts in birds
 ================
 
 Authors: Thilina De Silva, Marlon E. Cobos, Sumudu W. Fernando, Claudia Nuñez-Penichet, Utku Perkas, A. Townsend Peterson
